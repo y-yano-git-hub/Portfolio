@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="矢野義幸のポートフォリオサイト">
+  <title>Yoshiyuki's Portfolio</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1e5decd275.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/Styles.css">
+</head>
+
+<body>
+  <!-- ここからヘッダー -->
+  <header class="fixed-header">
+    <div class="header-bg">
+      <div class="page-header">
+        <h1><a href="#"><span class="name-description">Web Engineer</span><br>Yoshiyuki Yano</a></h1>
+        <nav>
+          <ul class="pc-nav">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="sp-nav">
+          <span class="material-icons" id="open">menu</span>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- ここまでヘッダー -->
+
+  <!-- ハンバーガーメニュー -->
+  <div class="overlay" id="mask">
+    <span class="material-icons" id="close">close</span>
+    <nav>
+      <ul>
+        <li id="overlay-about"><a href="#about">ABOUT</a></li>
+        <li id="overlay-works"><a href="#works">WORKS</a></li>
+        <li id="overlay-contact"><a href="#contact">CONTACT</a></li>
+        <li>
+          <ul class="sp-sns-icons">
+            <li id="overlay-twitter"><a href="https://twitter.com/yoshi86510362" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></li>
+            <li id="overlay-instagram"><a href="https://www.instagram.com/player2yoshi/" target="_blank"  class="instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ハンバーガーメニュー終わり -->
+
+  <!-- SNSリンク -->
+  <div id="sns-icons" class="sns-link">
+    <nav>
+      <ul>
+        <li><a href="https://twitter.com/yoshi86510362" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/player2yoshi/" target="_blank"  class="instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- SNSリンク終わり -->
+
+ <!-- ここからメイン -->
+  <section class="wrapper" id="main">
+    <img src="images/D7145D50-63B3-4E3E-BA3A-39F655046841_1_201_a.jpeg" class="main-img" alt="義幸のプロフィール画像" width="700px" height="auto">
+    <div class="main-contents">
+      <div class="main-text">
+        <p class="main-title-l">Yoshi<span class="yuki">yuki</span></p>
+        <p class="main-title-s">Web Engineer</p>
+      </div>
+      <div class="scroll">
+        <p>SCROLL</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
+    </div>
+  </section>
+  <!-- ここまでメイン -->
+
+  <!-- ここからAbout -->
+  <section class="about-wrapper" id="about">
+    <h1 class="about-title">ABOUT</h1>
+      <div class="about-contents">
+        <div class="about-img">
+          <img src="images/IMG_4711 2.jpeg" alt="プロフィール画像です" width="200px" height="auto">
+        </div>
+        <div class="about-text">
+          <p class="about-name">Yoshiyuki Yano | Web Engineer</p>
+          <p class="about-read">カフェで培ったコミュニケーションスキルを活かし、お客様の言葉の奥に隠れた本当の気持ちに寄り添えるエンジニアです。誰もが素晴らしい理想を持っていますが形にならなければ伝えることができません。それを伝える手助けをするのがエンジニアだと思っています。世の中の人が、「人」にしかできないことに集中できるようになれば世界がより良くなると確信しています。</p>
+        </div>
+        <div class="about-bottom-bg"></div>
+      </div>
+    </section>
+    <!-- ここまでAbout -->
+    
+  <!-- ここからWORKS -->
+  <section class="works-wrapper" id="works">
+    <h1 class="works-title">WORKS</h1>
+    <div class="works-contents">
+      <div class="works-item-bg">
+        <a href="Counter.html" class="item1"><div><p>Counter</p></div></a>
+        <a href="Todo.html" class="item2"><div><p>Todo List</p></div></a>
+        <a href="#" class="item3"><div><p>item3</p></div></a>
+        <a href="#" class="item4"><div><p>item4</p></div></a>
+        <a href="#" class="item5"><div><p>item5</p></div></a>
+        <a href="#" class="item6"><div><p>item6</p></div></a>
+        <a href="#" class="item7"><div><p>item7</p></div></a>
+        <a href="#" class="item8"><div><p>item8</p></div></a>
+        <a href="#" class="item9"><div><p>item9</p></div></a>
+        <a href="#" class="more-nav"><div><nobr>MORE <i class="fas fa-angle-double-right"></i></nobr></div></a>
+      </div>
+    </div>
+  </section>
+  <!-- ここまでWORKS -->
+
+  <!-- ここからCONTACT -->
+  <section class="contact-wrapper" id="contact">
+    <div class="contact-header"></div>
+    <div class="contact-container">
+      <h1 class="contact-title">CONTACT</h1>
+      <div class="form-area">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScNgHWpddDYVHzgq-0Wwi6ExwSx_HFnIR5OIyf7XeQ5hV1yRQ/formResponse">
+          <div>
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="entry.171360126" placeholder="山田 太郎" required>
+          </div>
+          
+          <div>
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="entry.1455289380" placeholder="example@email.com" required>
+          </div>
+          
+          <div>
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="entry.1253708842" placeholder="お問い合わせ内容"></textarea>
+          </div>
+          
+          <div class="btn-position">
+            <input type="submit" class="button" value="送信">
+          </div>
+
+          <P class="form-info">このフォームはGoogle フォームを使用しています。</P>
+       </form>
+      </div>
+    </div>
+  </section>
+  <!-- ここまでCONTACT -->
+
+  <!-- ここからフッター -->
+  <footer>
+    <div></div>
+    <div class="footer-area">
+      <p>(c)Yoshiyuki Yano</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

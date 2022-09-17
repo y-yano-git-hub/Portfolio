@@ -1,0 +1,655 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+	content: none;
+}
+table {
+  border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+  font-size: 100%;
+  font-family: "Yu Gothic Medium","游ゴシック Midium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+  color: #432;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #432;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+.fixed-header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-bg {
+  background: rgba(179, 179, 179, .55);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: solid 1px rgba(4,3,2,.2);
+}
+
+.header-bg:hover {
+  background: rgba(179, 179, 179, .9);
+  transition: .3s;
+}
+
+  
+  .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.page-header a:hover {
+  color: #ddd;
+  transition: .3s;
+}
+
+.page-header h1 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.page-header h1 .name-description {
+  text-transform: lowercase;
+  font-size: 0.8em;
+}
+
+.pc-nav {
+  display: flex;
+  list-style: none;
+}
+
+.pc-nav li {
+  margin-left: 36px;
+}
+
+.sp-nav {
+  margin-left: auto;
+}
+
+.sp-nav #open {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.sp-nav #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+  z-index: 20;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 48px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay .sp-sns-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.overlay .sp-sns-icons li {
+  font-size: 22px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+
+.pc-nav {
+  display: none;
+}
+
+/* SNSリンク */
+
+#sns-icons {
+  display: none;
+}
+
+.sns-link {
+  font-size: 20px;
+  position: fixed;
+  right: 15px;
+  margin-top: 50vh;
+}
+
+.sns-link ul {
+  list-style: none;
+  text-shadow: 1px 2px 3px #fff;
+}
+
+.sns-link a:hover {
+  opacity: .7;
+}
+
+/* メイン部分 */
+
+.wrapper {
+  padding-top: 111px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+
+.main-title-l,
+.main-title-s {
+  display: block;
+  z-index:1;
+}
+
+.main-title-l {
+  font-size: 70px;
+  font-family: 'Philosopher', sans-serif;
+}
+
+.main-title-s {
+  font-size: 24px;
+}
+
+.main-img {
+  top: 100px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.scroll {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.scroll p {
+  font-size: 20px;
+}
+
+.scroll i {
+  font-size: 30px;
+  color: #654;
+}
+
+/* ABOUT */
+
+.about-wrapper {
+  margin-top: 70px;
+}
+
+.about-title {
+  font-weight: normal;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
+.about-img {
+  text-align: center;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #222 50%, #222 100%);
+  object-fit: cover;
+}
+
+.about-img img {
+  border-radius: 50%;
+}
+
+.about-text {
+  color: #fff;
+  background: #222;
+}
+
+.about-name {
+  font-weight: normal;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.about-read {
+  margin: 10px 30px 0 30px;
+}
+
+.about-bottom-bg {
+  height: 200px;
+  background: linear-gradient(180deg, #222 0%, #fff 100%);
+}
+
+/* WORKS */
+
+.works-wrapper {
+  margin: 70px auto 0;
+}
+
+
+.works-title {
+  font-weight: normal;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+}
+
+.works-contents {
+  background: #444;
+  display: flex;
+}
+
+.works-item-bg {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template: 
+  ".... .... ...." 40px
+  ".... item1 ...." 300px
+  ".... .... ...." 10px
+  ".... item2 ...." 300px
+  ".... .... ...." 10px
+  ".... item3 ...." 300px
+  ".... .... ...." 10px
+  ".... item4 ...." 300px
+  ".... .... ...." 10px
+  ".... item5 ...." 300px
+  ".... .... ...." 10px
+  ".... item6 ...." 300px
+  ".... .... ...." 10px
+  ".... item7 ...." 300px
+  ".... .... ...." 10px
+  ".... item8 ...." 300px
+  ".... .... ...." 10px
+  ".... item9 ...."300px
+  ".... .... ...." 30px
+  ".... .... more" 50px
+  ".... .... ...."40px
+  / 40px 300px 40px;
+}
+
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.item9 {
+  grid-area: item9;
+}
+.more-nav {
+  grid-area: more;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9 {
+  background: gray;
+  position: relative;
+  text-decoration: none;
+}
+
+.item1:hover,
+.item2:hover,
+.item3:hover,
+.item4:hover,
+.item5:hover,
+.item6:hover,
+.item7:hover,
+.item8:hover,
+.item9:hover {
+  background: #ccc;
+  border-bottom: none;
+  transform: scale(1.05);
+  transition: 300ms;
+}
+
+.item1 p,
+.item2 p,
+.item3 p,
+.item4 p,
+.item5 p,
+.item6 p,
+.item7 p,
+.item8 p,
+.item9 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.more-nav {
+  color: #fff;
+  font-size: 20px;
+}
+
+.more-nav:hover {
+  color: rgb(50, 150, 200);
+}
+
+
+/* CONTACT */
+
+.contact-header {
+  height: 100px;
+  margin-top: 80px;
+  background: linear-gradient(180deg, #fff 0%, #222 100%);
+}
+
+.contact-container {
+  background: #222;
+  color: #fff;
+}
+
+.form-area {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px auto;
+}
+
+.contact-title {
+  font-weight: normal;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+}
+
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgba(255, 255, 255, .8);
+  border: #fff solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 350px;
+  height: 6rem;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-position {
+  text-align: center;
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  border: #fff solid 1px;
+  padding: 10px 5px;
+  background: #222;
+  color: #fff;
+}
+
+.button:hover {
+  background: #fff;
+  color: #222;
+  transition: .35s;
+}
+
+.form-info {
+  font-size: 12px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer div {
+  height: 100px;
+  background: #222;
+}
+
+.footer-area {
+  height: 60px;
+  background: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+.footer-area p {
+  margin-top: 30px;
+}
+
+
+
+/* PCサイト用レスポンシブ */
+@media (min-width: 600px) {
+  .pc-nav {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .pc-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .sp-nav {
+    display: none;
+  }
+  #sns-icons {
+    display: block;
+  }
+}
+
+@media (min-width: 690px) {
+  .works-item-bg {
+    grid-template: 
+    ".... .... .... .... ...." 40px
+    ".... item1 .... item2 ...." 300px
+    ".... .... .... .... ...." 10px
+    ".... item3 .... item4 ...." 300px
+    ".... .... .... .... ...." 10px
+    ".... item5 .... item6 ...." 300px
+    ".... .... .... .... ...." 10px
+    ".... item7 .... item8 ...." 300px
+    ".... .... .... .... ...." 10px
+    ".... item9 .... .... ...." 300px
+    ".... .... .... .... ...." 30px
+    ".... .... .... .... more" 50px
+    ".... .... .... .... ...." 40px
+    / 40px 300px 10px 300px 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .works-item-bg {
+    grid-template: 
+    ".... .... ..... .... .... .... ...." 40px
+    ".... item1 .... item2 .... item3 ...." 300px
+    ".... ..... .... .... .... .... ...." 10px
+    ".... item4 .... item5 .... item6 ...." 300px
+    ".... ..... .... .... .... .... ...." 10px
+    ".... item7 .... item8 .... item9 ...." 300px
+    ".... ..... .... .... .... .... ...." 30px
+    ".... ..... .... .... .... .... more" 50px
+    ".... ..... .... .... .... .... ...." 40px
+    / 40px 300px 10px 300px 10px 300px 40px;
+  }
+}
+
+
+@media (min-width: 937px) {
+  .wrapper {
+    width: 857px;
+    height: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+  }
+  
+  .main-title-l,
+  .main-title-s,
+  .main-img {
+    position: absolute;
+  }
+
+  .main-img {
+    right: 0;
+  }
+  
+  .main-title-l {
+    color: #432;
+    top: 500px;
+  }
+
+  .main-title-l .yuki {
+    color: #fff;
+  }
+
+  .main-title-s {
+    color: #432;
+    top: 560px;
+  }
+
+  .scroll {
+    position: absolute;
+    top: 850px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
